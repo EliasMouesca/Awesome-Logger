@@ -12,11 +12,11 @@ func TestLogger(t *testing.T) {
 	Debug("This is debug, myVar = %v", 23)
 	Info("This is some useful info :p")
 
-	Warn("This is a warning! File '%v' could not be found.", "falopa.file")
+	Warn("This is a warning! File '%v' could not be found.", "SomeFile.txt")
 
-	_, err := os.Open("sas")
+	_, err := os.Open("NotAValidFile.txt")
 	Error("This is an error with file '%s' - %v", "sas", err)
 
-	Fatal("This is a fatal error, execution will continue no longer !")
+	//Fatal("This is a fatal error, execution will continue no longer !")
 
 }
